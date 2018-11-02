@@ -1,0 +1,63 @@
+
+.notification{
+    position: relative;
+    border-radius: .4em; 
+    min-width: 150px;
+    min-height: 40px;
+    padding: 25px 30px 10px 15px;
+    text-align: justify;
+    font-size: 14px;
+    background: #ccc;
+    color: #222;
+    margin: 10px 0px;
+  }
+  .notification > .clear{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px 5px 5px 5px;
+  }
+  .notification.is-primay{
+    background: $color-primary;
+    color: #fff
+  }
+  .notification.is-success{
+    background: $color-success;
+    color: #fff
+  }
+  .notification.is-danger{
+    background: $color-error;
+    color: #fff
+  }
+  .notification.is-warning{
+    background: $color-warning;
+    color: #fff
+  }
+  .notification.is-info{
+    background: $color-info;
+    color: #fff
+  }
+  .notification-box{
+    width: 300px;
+    position: fixed;
+    text-align: center;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px 20px 20px 20px;
+  }
+  .notification-box .notification{
+  
+    width: 100%;
+  }
+  .notify{
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px 20px 20px 20px;
+    
+  }
+  

@@ -1,0 +1,66 @@
+$colorPrimary: orange;
+$colorPrimaryDark: rgb(238, 155, 0);
+$color-primary: #2ec866;
+$color-primary-dark: #1a237e;
+$color-info: #1e88e5;
+$color-info-dark: #1976d2;
+$color-success: #39b982;
+$color-success-dark: #32a774;
+$color-error: #f50057;
+$color-error-dark: #f50057;
+$color-warning: #fb8c00;
+$color-warning-dark: #fb8c00;
+$color-light: #f2f2f2;
+$color-light-dark: rgb(221, 221, 221);
+
+/*  button */
+$btn-min-width: 60px;
+$btn-min-height: 20px;
+$btn-radius: 0.1em;
+$btn-shadow-h: 0px;
+$btn-shadow-v: 0px;
+$btn-shadow-blur: 10px;
+$btn-shadow-spread: 0px;
+$btn-shadow-color: rgba(0, 0, 0, 0.5);
+$btn-opacity: 1;
+$btn-font-size: 12px;
+
+$animate_time: 0.3s;
+
+$fieldBorderWidth: 1px;
+$fieldBorderColor: #cccc;
+$fieldColor: #777;
+$fieldFontSize: 1em;
+$fieldHeight: 35px;
+$fieldHintFontSize: 1em;
+$fieldPaddingRight: 15px;
+$fieldPaddingBottom: 15px;
+$fieldPaddingLeft: 15px;
+$fieldPlaceholderColor: #cccc;
+$textboxRadius: 0.2rem;
+$rounder: 10em;
+
+$color-input-border: #ccc;
+$color-input: #7b7b7b;
+$color-checked-hover: #ccc;
+$color-checked-indication: #e6e6e6;
+$color-checked-shape: #fff;
+$form-item-radius: 0.2rem;
+
+// table
+$bg-table-header: #f1f1f1;
+$bg-table-row: #f7f7f7;
+$bg-table-hover: #f7f7f7;
+$bg-table-impair: #f7f7f7;
+$bg-table-header-light: #20cfee;
+$bg-table-border: #f7f7f7;
+
+$color-table-row: teal;
+$color-table-header: #555;
+$color-table-hover: teal;
+$color-table-header-light: #646464;
+
+$padding-table-row: 10px;
+$padding-table-cell: 10px;
+
+$bg-table-row-size: 1rem;

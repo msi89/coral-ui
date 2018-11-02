@@ -1,0 +1,120 @@
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .body-impair tr:nth-child(odd){ /* pour tous les td qui ont un index impair */
+    background: $bg-table-impair;
+  }
+  .ishover tbody tr:hover, .ishover th:hover{
+    background-color: $bg-table-hover;
+  }
+  .table th,.table td{
+    padding: 10px;
+    text-align: left;
+    border: solid 1px $bg-table-row;
+    font-size: 14px;
+  }
+  .table th{
+    background: $bg-table-header;
+    color: $color-table-header;
+  }
+  
+  @media only screen and (max-width:700px){
+    .table-responsive table,
+    .table-responsive thead, 
+    .table-responsive tbody, 
+    .table-responsive tr, 
+    .table-responsive th,
+    .table-responsive td{
+          display: block;
+      }
+     .table-responsive thead,.table-responsive th{
+          display: none;
+      }
+     .table-responsive td{
+          padding-left: 150px;
+          position: relative;
+          background: #FFF;
+          margin-top: -1px;
+      }
+   
+     .table-responsive td::before{
+          padding: 10px;
+          content: attr(data-label);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 130px;
+          bottom: 0;
+          background: $bg-table-header;
+          color: $color-table-header;
+          /* pour center le text */
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+      }
+    .table-responsive  tr{
+          margin-bottom: 1rem; /* 1 fois la taille de la police */
+      }
+  }
+  
+  .table-light td,.table-light th{
+    padding: $padding-table-cell;
+    text-align: left;
+    font-size: 14px;
+  }
+  .table-light th{
+    background: transparent;
+    color: $color-table-header;
+    border-bottom: solid 1px $bg-table-header-light;
+  }  
+  .table-light td{
+    border-bottom: solid 1px $bg-table-border;
+  }
+  
+  @media only screen and (max-width:700px){
+  .light-responsive table,
+  .table-responsive thead, 
+  .light-responsive tbody, 
+  .light-responsive tr, 
+  .light-responsive th,
+  .light-responsive td{
+        display: block;
+    }
+   .light-responsive thead{
+        display: none;
+    }
+   .light-responsive td{
+        padding-left: 150px;
+        position: relative;
+        background: #FFF;
+        margin-top: -1px;
+      
+    }
+   .light-responsive td:nth-child(odd){ /* pour tous les td qui ont un index impair */
+        background: #eee;
+    }
+  
+   .light-responsive td::before{
+        padding: 10px;
+        content: attr(data-label);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 130px;
+        bottom: 0;
+        background: turquoise;
+        border-bottom: 1px solid white;
+        color: #FFF;
+        /* pour center le text */
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+  .light-responsive  tr{
+        margin-bottom: 1rem; /* 1 fois la taille de la police */
+        border-bottom: 1px solid $bg-table-header-light;
+    }
+  }

@@ -1,0 +1,411 @@
+
+
+/* FIELD INPUT */
+.field__input{ 
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  color: $fieldColor;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-family: inherit;
+  font-size:$fieldFontSize;
+}
+
+.a-field .field__input:focus{
+  outline: none;
+}
+
+.field__input:focus::-webkit-input-placeholder{
+  color: $fieldPlaceholderColor;
+}
+
+.field__input:focus::-moz-placeholder{
+  color: $fieldPlaceholderColor;
+  opacity: 1;
+}
+
+.field{
+  width: 100%;
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.field__input{ 
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* a-field */
+
+.a-field{
+  position: relative;
+  box-sizing: border-box;
+  font-size: $fieldFontSize;
+  padding-top: 1em;  
+}
+
+
+.a-field .field__input{
+  height: $fieldHeight;
+  padding: 0 $fieldPaddingRight 0 $fieldPaddingLeft;
+  border-bottom: $fieldBorderWidth solid $fieldBorderColor;  
+}
+
+.a-field .field__input::-webkit-input-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field .field__input::-moz-placeholder{
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+
+.a-field .field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label{
+  opacity: 0;
+  bottom: $fieldPaddingBottom;
+}
+
+.a-field .field__input:focus::-webkit-input-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.a-field .field__input:focus::-moz-placeholder{
+  opacity: 1;
+  transition-delay: .2s;
+}
+
+.a-field .field__label-wrap{
+  box-sizing: border-box;
+  width: 100%;
+  height: $fieldHeight;	
+
+  pointer-events: none;
+  cursor: text;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.a-field .field__label{
+  position: absolute;
+  left: $fieldPaddingLeft;
+  bottom: calc(50% - .5em);
+
+  line-height: 1;
+  font-size: $fieldHintFontSize;
+
+  pointer-events: none;
+  transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+  will-change: bottom, opacity;
+}
+
+.a-field .field__input:focus ~ .field__label-wrap .field__label{
+  opacity: 1;
+  bottom: $fieldHeight;
+}
+
+/* a-field_a1 */
+
+.a-field_a1 .field__input{
+  transition: border-color .2s ease-out;
+  will-change: border-color;
+}
+
+.a-field_a1 .field__input:focus{
+  border-color: $color-primary;
+}
+
+/* a-field_a2 */
+
+.a-field_a2 .field__label-wrap:after{
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: $fieldBorderWidth;
+  background-color: $color-primary;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;  
+
+  will-change: width;
+  transition: width .285s ease-out;
+}
+
+.a-field_a2 .field__input:focus ~ .field__label-wrap:after{
+  width: 100%;
+}
+
+/* a-field_a3 */
+
+.a-field_a3{
+  padding-top: 1.5em;
+}
+
+.a-field_a3 .field__label-wrap:after{
+  content: "";
+  box-sizing: border-box;
+  width: 100%;
+  height: 0;
+
+  opacity: 0;
+  border: $fieldBorderWidth solid $color-primary;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  will-change: opacity, height;
+  transition: height .2s ease-out, opacity .2s ease-out;
+}
+
+.a-field_a3 .field__input:focus ~ .field__label-wrap:after{
+  height: 100%;
+  opacity: 1;
+}
+
+.a-field_a3 .field__input:focus ~ .field__label-wrap .field__label{
+  bottom: calc(#{$fieldHeight} + .5em);
+}
+
+.field_input_border{
+    border: 1px solid $fieldBorderColor;
+    transition: 0.4s;
+}
+.field_input_border:focus{
+  border-color:  $color-primary;
+}
+
+/* TAG INPUT */
+
+
+
+.input-tag{ 
+width: 100%;
+border: 1px solid #CCC;
+overflow-x: hidden;
+border-radius: .25rem;
+display: flex;
+min-height: 25px;
+
+}
+
+.input-tag:focus-within {
+border: 1px solid $color-primary;
+}
+.input-tag input{ 
+
+margin: 3px;     
+  outline: none;
+  border: none;   
+  background: transparent;
+  line-height: 25px;
+}
+.input-tag-content{
+word-wrap: break-word;
+padding: 3px;
+}
+.input-tag-content .input-tag-item{
+  padding: 2px;
+  margin:  2px;
+  border-radius: .25em;
+  color: #FFF;
+  background-color:$color-primary;  
+}
+.input-tag-item i{
+  margin: 2px;
+  width: 16px;
+  height: 16px;
+  color: black;
+  font-style: normal;
+}
+.input-tag-item i:hover{
+  margin: 2px;
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+  
+}
+
+
+/* TEXTBOX */
+
+.textbox{
+width: 100%;
+margin: 5px 0px;
+  background-color: transparent;
+  border-radius: $textboxRadius;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: inherit;
+  font-size: $fieldFontSize;
+  height: $fieldHeight;
+  padding: 0 $fieldPaddingRight 0 $fieldPaddingLeft;
+  border: $fieldBorderWidth solid $fieldBorderColor;  
+  transition: border 0.4s;
+  color: $fieldColor;
+}
+.textbox:focus{
+    outline: none;
+    border-color:  $color-primary;
+}
+
+
+.textbox::-webkit-input-placeholder{
+  color: $fieldPlaceholderColor;
+  transition: opacity .2s ease-out;
+}
+.textbox::-moz-placeholder{
+  color: $fieldPlaceholderColor;
+  transition: opacity .2s ease-out;
+}
+
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: $color-checked-indication;
+}
+
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: $color-checked-hover;
+}
+
+.control input:checked ~ .control__indicator {
+  background: $color-primary;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: $color-primary-dark;
+}
+
+.control input:disabled ~ .control__indicator {
+  background: $color-checked-indication;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid $color-checked-shape;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: $color-input;
+}
+
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: $color-checked-shape;
+}
+
+.control--radio input:disabled ~ .control__indicator:after {
+  background: $color-input;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.select select {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: 0;
+  border: 0;
+  border-radius: $form-item-radius;
+  background: transparent;
+  border: 1px solid $color-input-border;
+  color: $color-input;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select select::-ms-expand {
+  display: none;
+}
+
+.select select:hover,
+.select select:focus {
+  color: #000;
+  border: 1px solid $color-primary ;
+}
+
+.select select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.select__arrow {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: $color-input-border transparent transparent transparent;
+}
+
+.select select:hover ~ .select__arrow,
+.select select:focus ~ .select__arrow {
+  border-top-color: $color-primary ;
+}
+
+.select select:disabled ~ .select__arrow {
+  border-top-color: $color-input-border;
+}

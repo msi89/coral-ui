@@ -1,0 +1,324 @@
+// arrow
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #bbb;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 10px solid #bbb;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-left: 10px solid #bbb;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-right: 10px solid #bbb;
+}
+
+/*  02-10-18*/
+.control-group {
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 200px;
+  height: 210px;
+  margin: 5px;
+}
+@media only screen and (max-width: 572px) {
+  .control-group {
+    width: 100%;
+  }
+}
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: $color-checked-indication;
+}
+
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: $color-checked-hover;
+}
+
+.control input:checked ~ .control__indicator {
+  background: $color-primary;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: $color-primary-dark;
+}
+
+.control input:disabled ~ .control__indicator {
+  background: $color-checked-indication;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid $color-checked-shape;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: $color-input;
+}
+
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: $color-checked-shape;
+}
+
+.control--radio input:disabled ~ .control__indicator:after {
+  background: $color-input;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+  select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    outline: 0;
+    border: 0;
+    border-radius: $form-item-radius;
+    background: transparent;
+    border: 1px solid $color-input-border;
+    color: $color-input;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  select:hover,
+  select:focus {
+    color: #000;
+    border: 1px solid $color-primary;
+  }
+  select:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .select__arrow {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: $color-input-border transparent transparent transparent;
+  }
+  select:hover ~ .select__arrow,
+  select:focus ~ .select__arrow {
+    border-top-color: $color-primary;
+  }
+
+  select:disabled ~ .select__arrow {
+    border-top-color: $color-input-border;
+  }
+}
+
+//dropdown
+.dropdown {
+  width: auto;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    .arrow-up {
+      display: block;
+      border-bottom-color: #f9f9f9;
+      margin-left: 10px;
+      margin-top: -10px;
+    }
+    .dropdown-content {
+      display: block;
+      background-color: #fff;
+      a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      a:hover {
+        background-color: #f7f7f7;
+      }
+    }
+  }
+}
+
+// 02.11.2018
+/*radio */
+.form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #f1f1f1;
+  color: #666;
+  top: 4px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.form-radio:checked::before {
+  position: absolute;
+  font: 13px/1 "Open Sans", sans-serif;
+  left: 7px;
+  top: 2px;
+  content: "⅃";
+  transform: rotate(40deg);
+}
+
+.form-radio:hover {
+  background-color: #f7f7f7;
+}
+
+.form-radio:checked {
+  background-color: #92f70f;
+  color: #fff;
+}
+
+.group-radio {
+  margin-left: -5px;
+}
+
+.group-radio label {
+  font: 300 16px/1.7 "Open Sans", sans-serif;
+  color: #666;
+  cursor: pointer;
+}
+
+/* checkbox form */
+.form-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #f1f1f1;
+  color: #666;
+  top: 8px;
+  height: 20px;
+  width: 20px;
+  border: 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.form-checkbox:checked::before {
+  position: absolute;
+  font: 13px/1 "Open Sans", sans-serif;
+  left: 7px;
+  top: 3px;
+  content: "⅃";
+  transform: rotate(40deg);
+}
+
+.form-checkbox:hover {
+  background-color: #f7f7f7;
+}
+
+.form-checkbox:checked {
+  background-color: #92f70f;
+  color: #fff;
+}
+
+.group-checkbox {
+  margin-left: -5px;
+}
+
+.group-checkbox label {
+  font: 300 16px/1.7 "Open Sans", sans-serif;
+  color: #666;
+  cursor: pointer;
+}

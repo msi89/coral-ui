@@ -1,0 +1,16 @@
+.rounded{
+    border-radius: $rounder;
+  }
+  .isMiddle{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .isRight{
+    float: right;
+  }
+  .isCenter{
+    text-align: center;
+  }
