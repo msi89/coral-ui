@@ -1,10 +1,10 @@
- /* BUTTON */
+/* BUTTON */
 
- .group-button{
+.group-button {
   display: table;
   width: 100%;
 }
-.button{
+.button {
   min-width: 60px;
   min-height: 25px;
   padding: 10px 10px;
@@ -12,144 +12,146 @@
   border: 1px solid #ccc;
   background: #f7f7f7;
   color: #666;
-  border-radius: .25em;
+  border-radius: 0.25em;
   transition: color 0.3s;
 }
-.button:hover{
-background-color: #f1f1f1;
-color: #34495e;
-cursor: pointer;
+.button:hover {
+  background-color: #f1f1f1;
+  color: #34495e;
+  cursor: pointer;
 }
 
-.button:focus{
-outline: none;
-// border: 1px solid #ccc;
+.button:focus {
+  outline: none;
+  // border: 1px solid #ccc;
 }
-.btn-primary{
-border: 1px solid $color-primary;
-color: #fff;
-background: $color-primary;
-transition: all $animate_time;
+.btn-primary {
+  border: 1px solid $color-primary;
+  color: #fff;
+  background: $color-primary;
+  transition: all $animate_time;
 }
-.btn-primary:hover{
-color: #f9f9f9;
-opacity:0.5;
+.btn-primary:hover {
+  color: #f9f9f9;
+  background: $color-primary;
+  opacity: 0.8;
 }
-.btn-primary-light{
-border: 1px solid $color-primary;
-color: $color-primary;
-background: transparent;
-transition: all $animate_time;
+.btn-primary-light {
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  background: transparent;
+  transition: all $animate_time;
 }
-.btn-primary-light:hover{
-background-color: $color-primary;
-color:#f9f9f9 ;
+.btn-primary-light:hover {
+  background-color: $color-primary;
+  color: #f9f9f9;
 }
 // button succes
-.btn-success{
-border: 1px solid $color-success-dark;
-color: #fff;
-background: $color-success;
-transition: all $animate_time;
+.btn-success {
+  border: 1px solid $color-success-dark;
+  color: #fff;
+  background: $color-success;
+  transition: all $animate_time;
 }
-.btn-success:hover{
-color: #fff;
-opacity:0.5;
+.btn-success:hover {
+  color: #fff;
+  background: $color-success;
+  opacity: 0.8;
 }
-.btn-success-light{
-border: 1px solid $color-success;
-color: $color-success;
-background: none;
-transition: all $animate_time;
+.btn-success-light {
+  border: 1px solid $color-success;
+  color: $color-success;
+  background: none;
+  transition: all $animate_time;
 }
-.btn-success-light:hover{
-background-color: $color-success-dark;
-color:#f9f9f9 ;
+.btn-success-light:hover {
+  background-color: $color-success;
+  color: #f9f9f9;
 }
 // button danger
-.btn-danger{
-border: 1px solid $color-error-dark;
-color: #fff;
-background: $color-error;
-transition: all $animate_time;
+.btn-danger {
+  border: 1px solid $color-error-dark;
+  color: #fff;
+  background: $color-error;
+  transition: all $animate_time;
 }
 
-.btn-danger:hover{
-color: #fff;
-opacity:0.5;
+.btn-danger:hover {
+  color: #fff;
+  background: $color-error;
+  opacity: 0.8;
 }
-.btn-danger-light{
-border: 1px solid $color-error;
-color: $color-error;
-background: transparent;
-transition: all $animate_time;
+.btn-danger-light {
+  border: 1px solid $color-error;
+  color: $color-error;
+  background: transparent;
+  transition: all $animate_time;
 }
-.btn-danger-light:hover{
-background-color: #f9f9f9;
-color: $color-error-dark;
-border: 1px solid $color-error-dark;
+.btn-danger-light:hover {
+  background-color: $color-error;
+  color: #f9f9f9;
 }
 // button warning
-.btn-warning{
-border: 1px solid $color-warning-dark;
-color: #fff;
-background: $color-warning;
-transition: all $animate_time;
+.btn-warning {
+  border: 1px solid $color-warning-dark;
+  color: #fff;
+  background: $color-warning;
+  transition: all $animate_time;
 }
-.btn-warning:hover{
-color: #fff;
-opacity:0.5;
+.btn-warning:hover {
+  color: #fff;
+  background: $color-warning;
+  opacity: 0.8;
 }
-.btn-warning-light{
-border: 1px solid $color-warning;
-color: $color-warning;
-background: transparent;
-transition: all $animate_time;
+.btn-warning-light {
+  border: 1px solid $color-warning;
+  color: $color-warning;
+  background: transparent;
+  transition: all $animate_time;
 }
-.btn-warning-light:hover{
-background-color: #f9f9f9;
-color: $color-warning-dark;
-border: 1px solid $color-warning-dark;
+.btn-warning-light:hover {
+  background-color: $color-warning;
+  color: #f9f9f9;
 }
 // button info
-.btn-info{
-border: 1px solid $color-info-dark;
-color: #fff;
-background: $color-info;
-transition: all $animate_time;
+.btn-info {
+  border: 1px solid $color-info-dark;
+  color: #fff;
+  background: $color-info;
+  transition: all $animate_time;
 }
-.btn-info:hover{
-color: #fff;
-opacity:0.5;
+.btn-info:hover {
+  color: #fff;
+  background: $color-info;
+  opacity: 0.8;
 }
-.btn-info-light{
-border: 1px solid $color-info;
-color: $color-info;
-background: transparent;
-transition: all $animate_time;
+.btn-info-light {
+  border: 1px solid $color-info;
+  color: $color-info;
+  background: transparent;
+  transition: all $animate_time;
 }
-.btn-info-light:hover{
-background-color: #f9f9f9;
-color: $color-info-dark;
-border: 1px solid $color-info-dark;
+.btn-info-light:hover {
+  background-color: $color-info;
+  color: #f9f9f9;
 }
 
-.clear{
-color: #fff;
-width: 20px;
-height: 20px;
-vertical-align: baseline;
-border-radius: 50%;
-background: rgba(0, 0, 0, 0.2);
-transition: background .3s;
-border: none;
-padding-bottom: 2px;
+.clear {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  vertical-align: baseline;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+  border: none;
+  padding-bottom: 2px;
 }
 // CLEAR BUTTON
-.clear:focus{
-outline: none;
+.clear:focus {
+  outline: none;
 }
-.clear:hover{
-background: rgba(0, 0, 0, 0.3);
-cursor: pointer;
+.clear:hover {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
