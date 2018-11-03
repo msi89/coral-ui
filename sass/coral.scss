@@ -9,6 +9,15 @@
 @import "_input.scss";
 @import "_notification.scss";
 @import "_datatable.scss";
+@import "menu.scss";
 
 /* last import */
 @import "_suppless.scss";
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

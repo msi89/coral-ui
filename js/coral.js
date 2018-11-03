@@ -69,6 +69,42 @@ $(function() {
       .closest(".dropdown-menu")
       .toggle("fast");
   });
+
+  // Menu
+  var Accordion = function(el, multiple) {
+    this.el = el || {};
+    // more then one submenu open?
+    this.multiple = multiple || false;
+
+    var nav_menu_item = this.el.find(".nav_menu_item");
+    nav_menu_item.on(
+      "click",
+      { el: this.el, multiple: this.multiple },
+      this.dropdown
+    );
+  };
+
+  Accordion.prototype.dropdown = function(e) {
+    var $el = e.data.el,
+      $this = $(this),
+      //this is the ul.nav_submenu_item
+      $next = $this.next();
+
+    $next.slideToggle();
+    $this.parent().toggleClass("open");
+
+    if (!e.data.multiple) {
+      //show only one menu at the same time
+      $el
+        .find(".nav_submenu_item")
+        .not($next)
+        .slideUp()
+        .parent()
+        .removeClass("open");
+    }
+  };
+
+  var accordion = new Accordion($(".nav_menu"), false);
 });
 //RESPONSIVE TABLES
 document.addEventListener("DOMContentLoaded", function(event) {
