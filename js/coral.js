@@ -1,4 +1,10 @@
-/* input tag*/
+
+/*  for npm app
+
+global.jQuery = require('jquery');
+var $ = global.jQuery;
+window.$ = $;
+*/
 var InputTagItemNumber = 0;
 var InputTagItems = [];
 
@@ -103,12 +109,10 @@ $(function() {
         .removeClass("open");
     }
   };
-
   var accordion = new Accordion($(".nav_menu"), false);
-});
+
 //RESPONSIVE TABLES
-document.addEventListener("DOMContentLoaded", function(event) {
-  document.querySelector("#tag_input").onkeyup = function(e) {
+$("#tag_input").keyup(function(e) {
     /*space =32 ,=188 ;=59*/ if (e.keyCode == "188") {
       var tag = this.value.replace(",", "");
       if (tag != "") {
@@ -126,8 +130,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (e.keyCode == "32") {
       /* var tag = this.value.replace(/\s/g, ""); if(tag !="") { 	addInputTagItem(tag); 	this.value =''; }*/
     }
-  };
-  document.querySelectorAll(".datagrid").forEach(function(table) {
+  });
+
+  $(".datagrid").each(function(i, table) {
     let labels = Array.from(table.querySelectorAll("th")).map(function(th) {
       return th.innerText;
     });
@@ -135,4 +140,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       td.setAttribute("data-label", labels[i % labels.length]);
     });
   });
+  
 });
+
