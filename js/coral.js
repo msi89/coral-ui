@@ -141,5 +141,12 @@ $("#tag_input").keyup(function(e) {
     });
   });
   
+  $(".menu-list li a").each(function(i, item) {
+    item.classList.remove("is-active");
+    item.onclick = () => {
+      item.classList.add("is-active");
+    };
+  });
+  
 });
 
