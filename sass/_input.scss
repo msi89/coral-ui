@@ -1,88 +1,88 @@
-
-
 /* FIELD INPUT */
-.field__input{ 
+.field__input {
   background-color: transparent;
   border-radius: 0;
   border: none;
   color: $fieldColor;
   -webkit-appearance: none;
   -moz-appearance: none;
-
   font-family: inherit;
-  font-size:$fieldFontSize;
+  font-size: $fieldFontSize;
 }
 
-.a-field .field__input:focus{
+.a-field .field__input:focus {
   outline: none;
 }
 
-.field__input:focus::-webkit-input-placeholder{
+.field__input:focus::-webkit-input-placeholder {
   color: $fieldPlaceholderColor;
 }
 
-.field__input:focus::-moz-placeholder{
+.field__input:focus::-moz-placeholder {
   color: $fieldPlaceholderColor;
   opacity: 1;
 }
 
-.field{
+.field {
   width: 100%;
   display: inline-block;
   margin: 2px 0;
 }
 
-.field__input{ 
+.field__input {
   display: block;
   box-sizing: border-box;
   width: 100%;
+  color: $fieldColor;
 }
 
 /* a-field */
 
-.a-field{
+.a-field {
   position: relative;
   box-sizing: border-box;
   font-size: $fieldFontSize;
-  padding-top: 1em;  
+  padding-top: 1em;
 }
 
-
-.a-field .field__input{
+.a-field .field__input {
   height: $fieldHeight;
   padding: 0 $fieldPaddingRight 0 $fieldPaddingLeft;
-  border-bottom: $fieldBorderWidth solid $fieldBorderColor;  
+  border-bottom: $fieldBorderWidth solid $fieldBorderColor;
 }
 
-.a-field .field__input::-webkit-input-placeholder{
+.a-field .field__input::-webkit-input-placeholder {
   opacity: 0;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
-.a-field .field__input::-moz-placeholder{
+.a-field .field__input::-moz-placeholder {
   opacity: 0;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
-.a-field .field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label{
+.a-field
+  .field__input:not(:placeholder-shown)
+  ~ .field__label-wrap
+  .field__label {
   opacity: 0;
   bottom: $fieldPaddingBottom;
 }
 
-.a-field .field__input:focus::-webkit-input-placeholder{
+.a-field .field__input:focus::-webkit-input-placeholder {
   opacity: 1;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 
-.a-field .field__input:focus::-moz-placeholder{
+.a-field .field__input:focus::-moz-placeholder {
   opacity: 1;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 
-.a-field .field__label-wrap{
+.a-field .field__label-wrap {
   box-sizing: border-box;
   width: 100%;
-  height: $fieldHeight;	
+  height: $fieldHeight;
 
   pointer-events: none;
   cursor: text;
@@ -92,38 +92,39 @@
   left: 0;
 }
 
-.a-field .field__label{
+.a-field .field__label {
   position: absolute;
   left: $fieldPaddingLeft;
-  bottom: calc(50% - .5em);
+  bottom: calc(50% - 0.5em);
 
   line-height: 1;
   font-size: $fieldHintFontSize;
 
   pointer-events: none;
-  transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+  transition: bottom 0.2s cubic-bezier(0.9, -0.15, 0.1, 1.15),
+    opacity 0.2s ease-out;
   will-change: bottom, opacity;
 }
 
-.a-field .field__input:focus ~ .field__label-wrap .field__label{
+.a-field .field__input:focus ~ .field__label-wrap .field__label {
   opacity: 1;
   bottom: $fieldHeight;
 }
 
 /* a-field_a1 */
 
-.a-field_a1 .field__input{
-  transition: border-color .2s ease-out;
+.a-field_a1 .field__input {
+  transition: border-color 0.2s ease-out;
   will-change: border-color;
 }
 
-.a-field_a1 .field__input:focus{
+.a-field_a1 .field__input:focus {
   border-color: $color-primary;
 }
 
 /* a-field_a2 */
 
-.a-field_a2 .field__label-wrap:after{
+.a-field_a2 .field__label-wrap:after {
   content: "";
   box-sizing: border-box;
   width: 0;
@@ -132,23 +133,23 @@
 
   position: absolute;
   bottom: 0;
-  left: 0;  
+  left: 0;
 
   will-change: width;
-  transition: width .285s ease-out;
+  transition: width 0.285s ease-out;
 }
 
-.a-field_a2 .field__input:focus ~ .field__label-wrap:after{
+.a-field_a2 .field__input:focus ~ .field__label-wrap:after {
   width: 100%;
 }
 
 /* a-field_a3 */
 
-.a-field_a3{
+.a-field_a3 {
   padding-top: 1.5em;
 }
 
-.a-field_a3 .field__label-wrap:after{
+.a-field_a3 .field__label-wrap:after {
   content: "";
   box-sizing: border-box;
   width: 100%;
@@ -162,82 +163,83 @@
   left: 0;
 
   will-change: opacity, height;
-  transition: height .2s ease-out, opacity .2s ease-out;
+  transition: height 0.2s ease-out, opacity 0.2s ease-out;
 }
 
-.a-field_a3 .field__input:focus ~ .field__label-wrap:after{
+.a-field_a3 .field__input:focus ~ .field__label-wrap:after {
   height: 100%;
   opacity: 1;
 }
 
-.a-field_a3 .field__input:focus ~ .field__label-wrap .field__label{
-  bottom: calc(#{$fieldHeight} + .5em);
+.a-field_a3 .field__input:focus ~ .field__label-wrap .field__label {
+  bottom: calc(#{$fieldHeight} + 0.5em);
 }
 
-.field_input_border{
-    border: 1px solid $fieldBorderColor;
-    transition: 0.4s;
+.field_input_border {
+  border: 1px solid $fieldBorderColor;
+  transition: 0.4s;
 }
-.field_input_border:focus{
-  border-color:  $color-primary;
+.field_input_border:focus {
+  border-color: $color-primary;
 }
 
 /* TAG INPUT */
 
-
-
-.input-tag{ 
-width: 100%;
-border: 1px solid #CCC;
-overflow-x: hidden;
-border-radius: .25rem;
-display: flex;
-min-height: 25px;
-
+.input-tag {
+  width: calc(100%-5px);
+  border: 1px solid $fieldBorderColor;
+  padding: 8px 5px;
+  overflow-x: auto;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
 }
 
 .input-tag:focus-within {
-border: 1px solid $color-primary;
+  border: 1px solid $color-primary;
 }
-.input-tag input{ 
-
-margin: 3px;     
+.input-tag input {
   outline: none;
-  border: none;   
+  border: none;
   background: transparent;
-  line-height: 25px;
+  color: $fieldColor;
 }
-.input-tag-content{
-word-wrap: break-word;
-padding: 3px;
+.input-tag-content {
+  word-wrap: break-word;
+  padding: 3px;
 }
-.input-tag-content .input-tag-item{
+.input-tag-content .input-tag-item {
   padding: 2px;
-  margin:  2px;
-  border-radius: .25em;
-  color: #FFF;
-  background-color:$color-primary;  
+  margin: 0px 2px;
+  border-radius: 0.25em;
+  color: #fff;
+  background-color: $color-primary;
 }
-.input-tag-item i{
+.input-tag-content .input-tag-item:hover {
+  color: #fff;
+  background-color: $color-primary;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.input-tag-item i {
   margin: 2px;
   width: 16px;
   height: 16px;
   color: black;
   font-style: normal;
 }
-.input-tag-item i:hover{
+.input-tag-item i:hover {
   margin: 2px;
   color: rgb(153, 153, 153);
   cursor: pointer;
-  
 }
-
 
 /* TEXTBOX */
 
-.textbox{
-width: 100%;
-margin: 5px 0px;
+.textbox {
+  width: 100%;
+  margin: 5px 0px;
   background-color: transparent;
   border-radius: $textboxRadius;
   -webkit-appearance: none;
@@ -246,25 +248,23 @@ margin: 5px 0px;
   font-size: $fieldFontSize;
   height: $fieldHeight;
   padding: 0 $fieldPaddingRight 0 $fieldPaddingLeft;
-  border: $fieldBorderWidth solid $fieldBorderColor;  
+  border: $fieldBorderWidth solid $fieldBorderColor;
   transition: border 0.4s;
   color: $fieldColor;
 }
-.textbox:focus{
-    outline: none;
-    border-color:  $color-primary;
+.textbox:focus {
+  outline: none;
+  border-color: $color-primary;
 }
 
-
-.textbox::-webkit-input-placeholder{
+.textbox::-webkit-input-placeholder {
   color: $fieldPlaceholderColor;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
-.textbox::-moz-placeholder{
+.textbox::-moz-placeholder {
   color: $fieldPlaceholderColor;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
-
 
 .control {
   display: block;
@@ -381,7 +381,7 @@ margin: 5px 0px;
 .select select:hover,
 .select select:focus {
   color: #000;
-  border: 1px solid $color-primary ;
+  border: 1px solid $color-primary;
 }
 
 .select select:disabled {
@@ -403,7 +403,7 @@ margin: 5px 0px;
 
 .select select:hover ~ .select__arrow,
 .select select:focus ~ .select__arrow {
-  border-top-color: $color-primary ;
+  border-top-color: $color-primary;
 }
 
 .select select:disabled ~ .select__arrow {

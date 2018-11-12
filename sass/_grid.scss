@@ -1996,6 +1996,31 @@ html {
     }
   }
 }
+.flex-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+ .content-button  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin: 5px;
+  padding: 10px;
+  min-width: 115px;
+  min-height: 96px;
+}
+ .content-button  i{
+   font-size: 30px;
+ }
+ .content-button span{
+   font-size: 12px;
+ }
+.content-button:hover  {
+ background: $color-primary;
+ color: #fff;
+}
 
 .wrapper {
   display: flex;

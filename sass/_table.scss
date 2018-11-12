@@ -3,7 +3,7 @@ table{
     width: 100%;
     border-collapse: collapse;
   }
-  
+
   .body-impair tr:nth-child(odd){ /* pour tous les td qui ont un index impair */
     background: $bg-table-impair;
   }
@@ -20,12 +20,12 @@ table{
     background: $bg-table-header;
     color: $color-table-header;
   }
-  
+
   @media only screen and (max-width:700px){
     .table-responsive table,
-    .table-responsive thead, 
-    .table-responsive tbody, 
-    .table-responsive tr, 
+    .table-responsive thead,
+    .table-responsive tbody,
+    .table-responsive tr,
     .table-responsive th,
     .table-responsive td{
           display: block;
@@ -39,7 +39,7 @@ table{
           background: #FFF;
           margin-top: -1px;
       }
-   
+
      .table-responsive td::before{
           padding: 10px;
           content: attr(data-label);
@@ -59,7 +59,7 @@ table{
           margin-bottom: 1rem; /* 1 fois la taille de la police */
       }
   }
-  
+
   .table-light td,.table-light th{
     padding: $padding-table-cell;
     text-align: left;
@@ -69,16 +69,16 @@ table{
     background: transparent;
     color: $color-table-header;
     border-bottom: solid 1px $bg-table-header-light;
-  }  
+  }
   .table-light td{
     border-bottom: solid 1px $bg-table-border;
   }
-  
+
   @media only screen and (max-width:700px){
   .light-responsive table,
-  .table-responsive thead, 
-  .light-responsive tbody, 
-  .light-responsive tr, 
+  .table-responsive thead,
+  .light-responsive tbody,
+  .light-responsive tr,
   .light-responsive th,
   .light-responsive td{
         display: block;
@@ -91,12 +91,12 @@ table{
         position: relative;
         background: #FFF;
         margin-top: -1px;
-      
+
     }
    .light-responsive td:nth-child(odd){ /* pour tous les td qui ont un index impair */
         background: #eee;
     }
-  
+
    .light-responsive td::before{
         padding: 10px;
         content: attr(data-label);
@@ -105,7 +105,7 @@ table{
         left: 0;
         width: 130px;
         bottom: 0;
-        background: turquoise;
+        background: $color-primary;
         border-bottom: 1px solid white;
         color: #FFF;
         /* pour center le text */

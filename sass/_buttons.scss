@@ -3,12 +3,23 @@
 .group-button {
   display: table;
   width: 100%;
+  margin: 10px 0px;
+}
+.group-button.inline {
+  display: flex;
+  flex-direction: row;
+}
+.group-button.right {
+  justify-content: flex-end;
+}
+.group-button.center {
+  justify-content: center;
 }
 .button {
   min-width: 60px;
   min-height: 25px;
   padding: 10px 10px;
-  margin: 10px 5px;
+  margin: 1px 5px;
   border: 1px solid #ccc;
   background: #f7f7f7;
   color: #666;
@@ -154,4 +165,59 @@
 .clear:hover {
   background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}
+.btn_icon {
+  margin: 0px 5px;
+  background: transparent;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.btn_icon:active {
+  background: rgba(255, 225, 255, 0.1);
+}
+.btn_icon.bubble::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: $color-primary;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+.nav_btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: background 0.3s;
+}
+.nav_btn:active {
+  background: rgba(0, 0, 0, 0.2);
+}
+.nav_btn.bubble::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: $color-primary;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+.nav_btn.has-color{
+  background: rgba(0, 0, 0, 0.1);
+}
+.material-icons {
+  font-size: 24px;
 }

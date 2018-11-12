@@ -1,6 +1,7 @@
 .menu {
   font-size: 1rem;
 }
+
 .menu.is-small {
   font-size: 0.75rem;
 }
@@ -18,24 +19,33 @@
   color: #4a4a4a;
   display: block;
   padding: 0.5em 0.75em;
+  cursor: pointer;
 }
 .menu-list a:hover {
   background-color: #f5f5f5;
   color: #363636;
 }
-.menu-list a.is-active {
-  background-color: $color-primary;
-  color: #fff;
+
+// .menu-list li ul {
+//   border-left: 1px solid #dbdbdb;
+//   margin: 0.75em;
+//   padding-left: 0.75em;
+// }
+.menu-list li a {
+  // width: 100vw;
+  display: flex;
+  align-items: center;
 }
-.menu-list li ul {
-  border-left: 1px solid #dbdbdb;
-  margin: 0.75em;
-  padding-left: 0.75em;
+
+.menu-list li a i {
+  margin-right: 8px;
 }
+
 .menu-label {
   color: #7a7a7a;
   font-size: 0.75em;
   letter-spacing: 0.1em;
+  margin-left: 5px;
   text-transform: uppercase;
 }
 .menu-label:not(:first-child) {
@@ -43,6 +53,37 @@
 }
 .menu-label:not(:last-child) {
   margin-bottom: 1em;
+}
+
+/* arrow  up:02EF, down: 02F0, left:02F1 , right: 02F2` */
+/* angle  up:2038, down:02EC , left:2039 , right:203A ` */
+/* arithmetique     sousc: u2212, plus:002b  */
+.menu-list a.expandible::after {
+  content: "\002b";
+  float: right;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+.menu-list a.collapsed::after {
+  content: "\2212";
+  justify-content: flex-end;
+}
+
+.menu-list a.switched {
+  // border-left: 2px solid #cddc39;
+  background: $color-selected-bg;
+  color: $color-selected;
+}
+
+.menu-list-collapse {
+  display: none;
+  border-left: 1px solid #dbdbdb;
+  margin: 0.75em;
+  padding-left: 0.75em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 /* */

@@ -1,6 +1,6 @@
 $colorPrimary: orange;
 $colorPrimaryDark: rgb(238, 155, 0);
-$color-primary: #2ec866;
+$color-primary: #3BB881 /* #2ec866 */;
 $color-primary-dark: #1a237e;
 $color-info: #1e88e5;
 $color-info-dark: #1976d2;
@@ -11,6 +11,8 @@ $color-error-dark: #f50057;
 $color-warning: #fb8c00;
 $color-warning-dark: #fb8c00;
 $color-light: #f2f2f2;
+$color-selected: #363636;
+$color-selected-bg: #f4f4f4;
 $color-light-dark: rgb(221, 221, 221);
 
 /*  button */
@@ -29,7 +31,7 @@ $animate_time: 0.3s;
 
 $fieldBorderWidth: 1px;
 $fieldBorderColor: #cccc;
-$fieldColor: #777;
+$fieldColor: #444;
 $fieldFontSize: 1em;
 $fieldHeight: 35px;
 $fieldHintFontSize: 1em;
@@ -40,8 +42,8 @@ $fieldPlaceholderColor: #cccc;
 $textboxRadius: 0.2rem;
 $rounder: 10em;
 
-$color-input-border: #ccc;
-$color-input: #7b7b7b;
+$color-input-border: #cccc;
+$color-input: #444;
 $color-checked-hover: #ccc;
 $color-checked-indication: #e6e6e6;
 $color-checked-shape: #fff;
@@ -52,7 +54,7 @@ $bg-table-header: #f1f1f1;
 $bg-table-row: #f7f7f7;
 $bg-table-hover: #f7f7f7;
 $bg-table-impair: #f7f7f7;
-$bg-table-header-light: #20cfee;
+$bg-table-header-light: #f1f1f1;
 $bg-table-border: #f7f7f7;
 
 $color-table-row: teal;

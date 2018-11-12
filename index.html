@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./fonts/material/material-icons.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/coral.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/datatable.css" />
 
@@ -19,6 +20,8 @@
   border: 0.255px solid #2ec866;
   margin: 25px 0px;
 }
+
+
  </style>
 </head>
 
@@ -35,28 +38,61 @@
                     <!-- DROPDOWN  -->
                     <div>
                         <h2>Dropdown Button</h2>
-                        <div class="dropdown">
-                            <button id="down" class="button btn-primary-light dropdown-button">show</button>
-                            <div class="dropdown-menu" data-visible="hide">
-                                <div class="arrow-up"></div>
+                        <div class="dropdown is-active">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span>Dropdown button</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
                                 <div class="dropdown-content">
-                                    <a href="#">Home</a>
-                                    <a href="#">About</a>
-                                    <a href="#">Service</a>
-                                    <a href="#">Contact</a>
+                                    <a href="#" class="dropdown-item">
+                                        Dropdown item
+                                    </a>
+                                    <a class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item is-active">
+                                        Active dropdown item
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        Other dropdown item
+                                    </a>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        With a divider
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
+
                         <div class="dropdown">
-                            <button id="down" class="button btn-primary dropdown-button">show</button>
-                            <div class="dropdown-menu" data-visible="hide">
-                                <div class="arrow-up"></div>
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <span>Content</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu2" role="menu">
                                 <div class="dropdown-content">
-                                    <a href="#">Home</a>
-                                    <a href="#">About</a>
-                                    <a href="#">Service</a>
-                                    <a href="#">Contact</a>
+                                    <div class="dropdown-item">
+                                        <p>You can insert <strong>any type of content</strong> within the dropdown
+                                            menu.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <a href="#" class="dropdown-item">
+                                        This is a link
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +166,7 @@
                         <h2>Input tag</h2>
                         <div class="input-tag">
                             <div class="input-tag-content"></div>
-                            <input type="text" id="tag_input" value="" />
+                            <input type="text" id="tag_input" value="" class="tag_input" />
                         </div>
 
                     </section>
@@ -285,13 +321,8 @@
                             consectetur
                             adipiscing elit</p>
                     </div>
-                    <div class="notification is-primary">
-                        <button class="clear">x</button>
-                        </p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit</p>
-                    </div>
-                    <div class="notification is-success">
+                  
+                    <div class="notification is-success" >
                         <button class="clear">x</button>
                         </p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet,
                         consectetur
@@ -359,6 +390,7 @@
                             <li><a>Payments</a></li>
                             <li><a>Transfers</a></li>
                             <li><a>Balance</a></li>
+
                         </div>
                     </aside>
                 </section>
@@ -468,7 +500,7 @@
 
 
         <h2>Default table</h2>
-        <table class="table">
+        <table id="table_default" class="table">
             <thead>
                 <th>Nom</th>
                 <th>Ville</th>
@@ -477,68 +509,13 @@
                 <th>Position</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
+
             </tbody>
 
         </table>
 
         <h2>Responsive table </h2>
-        <table class="table table-responsive">
+        <table id="tb_resp" class="table table-responsive">
             <thead>
                 <th>Nom</th>
                 <th>Ville</th>
@@ -548,67 +525,12 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
-                <tr>
-                    <td data-label="Nom">Assie marc</td>
-                    <td data-label="Ville">Abidjan</td>
-                    <td data-label="Tour 1">58min 40s</td>
-                    <td data-label="Tour 2">1h23 58min 40s</td>
-                    <td data-label="Position">2eme</td>
-                </tr>
+
             </tbody>
         </table>
 
         <h2>Responsive table with js</h2>
-        <table class="table table-responsive datagrid">
+        <table id="table_responsive_datagrid" class="table table-responsive datagrid">
             <thead>
                 <th>Nom</th>
                 <th>Ville</th>
@@ -617,67 +539,12 @@
                 <th>Position</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
+
             </tbody>
         </table>
 
         <h2> Light Responsive table with js</h2>
-        <table class="table-light light-responsive datagrid ishover">
+        <table id="table_responsive" class="table-light light-responsive datagrid ishover">
             <thead>
                 <th>Nom</th>
                 <th>Ville</th>
@@ -686,69 +553,16 @@
                 <th>Position</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
-                <tr>
-                    <td>Assie marc</td>
-                    <td>Abidjan</td>
-                    <td>58min 40s</td>
-                    <td>1h23 58min 40s</td>
-                    <td>2eme</td>
-                </tr>
+
+
             </tbody>
         </table>
 
         <h2>Datatable</h2>
-        <table id="mytable" class="table">
+        <table id="myDatatable" class="table">
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
@@ -756,497 +570,35 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Oreli</td>
-                    <td>oreli@mail.ci</td>
-                    <td>+22507836510</td>
-                    <td>Cocody, 7me tranche</td>
-                </tr>
-                <tr>
-                    <td>Rachelle</td>
-                    <td>rahou@mail.ci</td>
-                    <td>+225875666</td>
-                    <td>Long champ</td>
-                </tr>
+
             </tbody>
         </table>
     </div>
+
     <script src="./js/jquery.min.js"></script>
     <script src="./js/coral.js"></script>
     <!-- jquery datatable  -->
     <script type="text/javascript" charset="utf8" src="./js/jquery.dataTables.js"></script>
 
     <script>
+        function getDatas() {
+            var dt = '<tr><td>Assie marc</td><td>Abidjan</td> <td>58min 40s</td> <td>1h23 58min 40s</td> <td>2eme</td></tr>';
+            var dt2 = '<tr> <td data-label="Nom">Assie marc</td><td data-label="Ville">Abidjan</td><td data-label="Tour 1">58min 40s</td><td data-label="Tour 2">1h23 58min 40s</td><td data-label="Position">2eme</td> </tr>';
+
+            for (let i = 0; i < 5; i++) {
+                $('#table_responsive tbody').append(dt)
+                $('#table_responsive_datagrid tbody').append(dt)
+                $('#table_default tbody').append(dt)
+                $('#tb_resp tbody').append(dt2)
+
+            }
+            for (let i = 0; i < 200; i++) {
+                $('#myDatatable tbody').append('<tr><td>' + i + '</td> <td>Oreli</td><td>oreli@mail.ci</td> <td>+22507836510</td> <td>Cocody, 7me tranche</td></tr>')
+            }
+        }
         $(document).ready(function () {
-            $('#mytable').DataTable();
+            getDatas();
+            $('#myDatatable').DataTable();
         });
     </script>
 
